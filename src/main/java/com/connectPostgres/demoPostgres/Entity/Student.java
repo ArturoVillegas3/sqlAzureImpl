@@ -1,11 +1,18 @@
 package com.connectPostgres.demoPostgres.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "students")
+@Table
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer idstudent;
     private String studentname;
     private String studentnumber;

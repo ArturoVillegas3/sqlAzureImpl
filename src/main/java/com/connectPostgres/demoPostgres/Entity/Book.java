@@ -1,8 +1,15 @@
 package com.connectPostgres.demoPostgres.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Books")
+@Table
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Book {
     public Integer getBookid() {
         return bookid;
@@ -29,7 +36,7 @@ public class Book {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     public Integer bookid;
     public String bookname;
     public Boolean isborrowed;
